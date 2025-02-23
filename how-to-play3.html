@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play - DPX Game</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Body Styling */
+        body {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #222;
+            padding: 10px 20px;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            display: none; /* Hide by default, can be used for mobile */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* Wallet Button */
+        .connect-wallet, .disconnect-wallet {
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .disconnect-wallet {
+            display: none;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <div class="logo-container">
+            <img src="images/DPX-LOGO.png" alt="Logo">
+            <span class="logo-text">DPX</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="how-to-play.html">How to Play</a>
+            <a href="#">My NFTs</a>
+        </div>
+        <button id="connectWallet" class="connect-wallet">Connect Wallet</button>
+        <button id="disconnectWallet" class="disconnect-wallet">Disconnect</button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>How to Play</h1>
+
+        <div class="section">
+            <h2>🎲 Game Overview</h2>
+            <p>This is a Web3 version of the classic Pinoy Color Game. Bet on colors, win rewards, and earn NFTs using Core Tokens (CORE)!</p>
+        </div>
+
+        <div class="section">
+            <h2>🛠 Getting Started</h2>
+            <p><strong>1. Connect Your Wallet:</strong> Click "Connect Wallet" and choose a Core Blockchain-supported wallet (e.g., MetaMask).</p>
+            <p><strong>2. Get CORE Tokens:</strong> Ensure you have CORE in your wallet. If needed, swap or buy CORE from an exchange.</p>
+        </div>
+
+        <div class="section">
+            <h2>🎮 How to Play</h2>
+            <p><strong>1. Enter Your Bet:</strong> Choose how many CORE Tokens you want to bet.</p>
+            <p><strong>2. Choose Your Colors:</strong> Pick 1 to 6 colors. Your multiplier depends on how many colors you bet on.</p>
+            <p><strong>3. Place Your Bet:</strong> Click "Place Bet" to confirm. Your CORE Tokens will be locked in a smart contract.</p>
+            <p><strong>4. Wait for the Result:</strong> The game rolls and reveals the winning color(s).</p>
+            <p><strong>5. Win or Try Again:</strong> If your color appears, you win based on the multiplier! If not, part of your bet helps fund NFT rewards.</p>
+        </div>
+
+        <div class="section">
+            <h2>🏆 Rewards & Bonuses</h2>
+            <p>✅ <strong>NFT Rewards:</strong> Lost bets contribute to the NFT reward pool.</p>
+            <p>✅ <strong>Streak Bonus:</strong> Play consistently to unlock bonus rewards.</p>
+            <p>✅ <strong>Wheel of Fortune:</strong> Get random bonus prizes!</p>
+        </div>
+
+        <div class="section">
+            <h2>🔐 Web3 & Fairness</h2>
+            <p>✔️ The game runs on <strong>smart contracts</strong>, ensuring full transparency.</p>
+            <p>✔️ No centralized control – everything is <strong>blockchain-based</strong>.</p>
+            <p>✔️ Earn <strong>real-value NFTs</strong> that you can trade outside the game.</p>
+        </div>
+
+        <div class="section">
+            <h2>❓ Need Help?</h2>
+            <p>For support, check out our FAQ page or join our community!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Connected to Core Blockchain</p>
+        <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            let navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
